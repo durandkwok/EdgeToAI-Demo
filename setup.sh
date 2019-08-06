@@ -80,10 +80,10 @@ cp ~/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar /usr/share/
 rm -rf ~/mysql-connector-java-5.1.46*
 
 echo "-- Create DBs required by CM"
-mysql -u root < ~/OneNodeCDHCluster/scripts/create_db.sql
+mysql -u root < ~/EdgeToAI-Demo/scripts/create_db.sql
 
 echo "-- Secure MariaDB"
-mysql -u root < ~/OneNodeCDHCluster/scripts/secure_mariadb.sql
+mysql -u root < ~/EdgeToAI-Demo/scripts/secure_mariadb.sql
 
 echo "-- Prepare CM database 'scm'"
 /opt/cloudera/cm/schema/scm_prepare_database.sh mysql scm scm cloudera
@@ -155,9 +155,9 @@ yum install -y python-pip
 pip install --upgrade pip
 pip install cm_client
 
-sed -i "s/YourHostname/`hostname -f`/g" ~/OneNodeCDHCluster/$TEMPLATE
-sed -i "s/YourCDSWDomain/cdsw.$PUBLIC_IP.nip.io/g" ~/OneNodeCDHCluster/$TEMPLATE
-sed -i "s/YourPrivateIP/`hostname -I | tr -d '[:space:]'`/g" ~/OneNodeCDHCluster/$TEMPLATE
+sed -i "s/YourHostname/`hostname -f`/g" ~/EdgeToAI-Demo/$TEMPLATE
+sed -i "s/YourCDSWDomain/cdsw.$PUBLIC_IP.nip.io/g" ~/EdgeToAI-Demo/$TEMPLATE
+sed -i "s/YourPrivateIP/`hostname -I | tr -d '[:space:]'`/g" ~/EdgeToAI-Demo/$TEMPLATE
 sed -i "s#YourDockerDevice#$DOCKERDEVICE#g" ~/OneNodeCDHCluster/$TEMPLATE
 
 sed -i "s/YourHostname/`hostname -f`/g" ~/OneNodeCDHCluster/scripts/create_cluster.py
