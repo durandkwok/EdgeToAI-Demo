@@ -158,11 +158,11 @@ pip install cm_client
 sed -i "s/YourHostname/`hostname -f`/g" ~/EdgeToAI-Demo/$TEMPLATE
 sed -i "s/YourCDSWDomain/cdsw.$PUBLIC_IP.nip.io/g" ~/EdgeToAI-Demo/$TEMPLATE
 sed -i "s/YourPrivateIP/`hostname -I | tr -d '[:space:]'`/g" ~/EdgeToAI-Demo/$TEMPLATE
-sed -i "s#YourDockerDevice#$DOCKERDEVICE#g" ~/OneNodeCDHCluster/$TEMPLATE
+sed -i "s#YourDockerDevice#$DOCKERDEVICE#g" ~/EdgeToAI-Demo/$TEMPLATE
 
-sed -i "s/YourHostname/`hostname -f`/g" ~/OneNodeCDHCluster/scripts/create_cluster.py
+sed -i "s/YourHostname/`hostname -f`/g" ~/EdgeToAI-Demo/scripts/create_cluster.py
 
-python ~/OneNodeCDHCluster/scripts/create_cluster.py $TEMPLATE
+python ~/EdgeToAI-Demo/scripts/create_cluster.py $TEMPLATE
 
 # configure and start EFM and Minifi
 service efm start
