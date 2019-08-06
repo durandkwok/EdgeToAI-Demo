@@ -1,4 +1,4 @@
-# Single Node EDGEToAI CDH Cluster Setup
+# Single Node EdgeToAI CDH Cluster Setup
 
 This script automatically sets up a CDH cluster on the public cloud on a single VM with the following 16 services: 
 
