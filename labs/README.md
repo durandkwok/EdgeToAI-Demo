@@ -1,4 +1,4 @@
-# EDGE2AI Lab
+# EdgeToAI Lab
 
 ## Introduction
 
