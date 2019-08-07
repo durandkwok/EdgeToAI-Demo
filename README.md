@@ -62,8 +62,8 @@ To install Schema Registry, you must use an appropriate template file, like `sch
 ```
 $ sudo su -
 $ yum install -y git
-$ git clone https://github.com/fabiog1901/OneNodeCDHCluster.git
-$ cd OneNodeCDHCluster
+$ git clone https://github.com/durandkwok/EdgeToAI-Demo.git
+$ cd EdgeToAI-Demo
 $ chmod +x setup.sh
 ```
 
