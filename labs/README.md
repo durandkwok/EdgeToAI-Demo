@@ -68,7 +68,7 @@ Please note: this env variable is not required for a CDH 5 cluster.
 
 **STEP 1** : Create the project
 
-Return to the main page and click on **New Project**, using this GitHub project as the source: `https://github.com/fabiog1901/IoT-predictive-maintenance`.
+Return to the main page and click on **New Project**, using this GitHub project as the source: `https://github.com/durandkwok/EdgeToAI-Demo`.
 
 
 ![](./images/image8.png)
@@ -233,7 +233,7 @@ $ systemctl start mosquitto
 
 Now clone this repo, then run the simulator to send sensor data to mosquitto.
 ```
-$ git clone https://github.com/fabiog1901/IoT-predictive-maintenance.git
+#$ git clone https://github.com/fabiog1901/IoT-predictive-maintenance.git
 $ mv IoT-predictive-maintenance/mqtt.* ~
 $ python mqtt.iot_simulator.py mqtt.iot.config
 ```
